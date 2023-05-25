@@ -1,0 +1,409 @@
+:root{
+    /* Primary */
+    --red-light:hsl(0, 100%, 67%);
+    --red-light-bg:hsla(0, 100%, 67%, 0.08);
+    --yellow-orangey:hsl(39, 100%, 56%);
+    --yellow-orangey-bg:hsl(39, 100%, 56%, 0.08);
+    --teal-green:hsl(166, 100%, 37%);
+    --teal-green-bg:hsl(166, 100%, 37%, 0.08);
+    --blue-cobalt:hsl(234, 85%, 45%);
+    --blue-cobalt-bg:hsl(234, 85%, 45%, 0.08);
+
+    /* Gradients */
+    --bg-blue-slate-light: hsl(252, 100%, 67%); 
+    --bg-blue-royal-light: hsl(241, 81%, 54%);
+    --circle-blue-violet: hsla(256, 72%, 46%, 1); 
+    --circle-blue-persian: hsla(241, 72%, 46%, 0); 
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --blue-pale: hsl(221, 100%, 96%);
+    --lavender-light: hsl(241, 100%, 89%);
+    --blue-dark-gray: hsl(224, 30%, 27%);
+ 
+}
+
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media (max-width: 450px){
+
+    * {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 24px;
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;   
+    }
+
+    div#principal{
+        background: linear-gradient(to bottom,var(--bg-blue-slate-light) 0%, var(--bg-blue-royal-light) 70%);
+        width: 100%;  
+        /*height: 300px;*/
+        padding: 1rem;
+        border-radius: 0 0 16px 16px;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    div#principal h3{
+        text-align: center;
+        color: var(--blue-pale);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    div#principal .score {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, var(--circle-blue-violet) 20%, var(--circle-blue-persian) 100%);
+        border-radius: 50%;
+
+    }
+    
+    div#principal h1{
+        text-align: center;
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: 800;
+        
+    }
+    div#principal span{
+        text-align: center;
+        color: var(--lavender-light);
+        font-size: 0.65rem;
+    }
+    div#principal .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0 1rem;
+        margin-bottom: 0.9rem;
+    
+    }
+    div#principal .description h2{
+        color: var(--white);
+    }
+    div#principal .description p{
+        color: var(--lavender-light);
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    div#secundario{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        background-color: var(--white);
+        border-radius: 16px;
+        padding: 1rem;
+        width: 100%;
+    }
+    div#secundario h3{
+        font-size: 0.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        
+    }
+    
+    div#secundario ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-bottom: 1.6rem;
+    
+    }
+    div#secundario li{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0.15rem;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    li.reaction {
+        background: var(--red-light-bg);
+    }
+    
+    h6.reaction {
+        color: var(--red-light);
+    }
+    
+    li.memory {
+        background: var(--yellow-orangey-bg);
+    }
+    
+    h6.memory {
+        color: var(--yellow-orangey);
+    }
+    
+    li.verbal {
+        background: var(--teal-green-bg);
+    }
+    
+    h6.verbal {
+        color: var(--teal-green);
+    }
+    
+    li.visual {
+        background: var( --blue-cobalt-bg);
+    }
+    
+    h6.visual {
+        color: var( --blue-cobalt);
+    }
+    
+    div#secundario li > div {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    div#secundario li > div h6 {
+        font-size: 0.6rem;
+    }
+    
+    div#secundario li > div img{
+        width: 12px;
+    }
+    
+    
+    div#secundario li > p {
+        font-size: 0.6rem;   
+        color: var(--blue-dark-gray);
+        font-weight: 500;
+    }
+    
+    div#secundario li > p span {
+        font-size: 0.6rem;
+        font-weight: 800;
+    }
+    
+    div#secundario button{
+        color: var(--white);
+        border-radius: 1rem;
+        background: var(--blue-dark-gray);
+        border: 0;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        cursor:pointer;
+        transition: 0.3s;
+        
+        
+    }
+    
+    div#secundario button:hover{
+        background-color: var(--bg-blue-royal-light); 
+    }  
+
+}
+
+@media (min-width: 450px){
+    main {
+        display: flex;
+        background-color: var(--white);
+        border-radius: 16px;
+        width: 440px;
+        box-shadow: 10px 10px 10px var(--blue-pale);
+        margin: 45px auto 0;
+    }
+    
+    
+    div#principal{
+        background: linear-gradient(to bottom,var(--bg-blue-slate-light) 0%, var(--bg-blue-royal-light) 70%);
+        width: 220px;  
+        padding: 1rem;
+        border-radius: 16px;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    div#principal h3{
+        text-align: center;
+        color: var(--blue-pale);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    div#principal .score {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, var(--circle-blue-violet) 20%, var(--circle-blue-persian) 100%);
+        border-radius: 50%;
+
+    }
+    
+    div#principal h1{
+        text-align: center;
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: 800;
+        
+    }
+    div#principal span{
+        text-align: center;
+        color: var(--lavender-light);
+        font-size: 0.65rem;
+    }
+    div#principal .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0 1rem;
+        margin-bottom: 0.9rem;
+    
+    }
+    div#principal .description h2{
+        color: var(--white);
+    }
+    div#principal .description p{
+        color: var(--lavender-light);
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    div#secundario{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        background-color: var(--white);
+        border-radius: 16px;
+        padding: 1rem;
+        width: 220px;
+    }
+    div#secundario h3{
+        font-size: 0.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        
+    }
+    
+    div#secundario ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-bottom: 1.6rem;
+    
+    }
+    div#secundario li{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0.15rem;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    li.reaction {
+        background: var(--red-light-bg);
+    }
+    
+    h6.reaction {
+        color: var(--red-light);
+    }
+    
+    li.memory {
+        background: var(--yellow-orangey-bg);
+    }
+    
+    h6.memory {
+        color: var(--yellow-orangey);
+    }
+    
+    li.verbal {
+        background: var(--teal-green-bg);
+    }
+    
+    h6.verbal {
+        color: var(--teal-green);
+    }
+    
+    li.visual {
+        background: var( --blue-cobalt-bg);
+    }
+    
+    h6.visual {
+        color: var( --blue-cobalt);
+    }
+    
+    div#secundario li > div {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    div#secundario li > div h6 {
+        font-size: 0.6rem;
+    }
+    
+    div#secundario li > div img{
+        width: 12px;
+    }
+    
+    
+    div#secundario li > p {
+        font-size: 0.6rem;   
+        color: var(--blue-dark-gray);
+        font-weight: 500;
+    }
+    
+    div#secundario li > p span {
+        font-size: 0.6rem;
+        font-weight: 800;
+    }
+    
+    div#secundario button{
+        color: var(--white);
+        border-radius: 1rem;
+        background: var(--blue-dark-gray);
+        border: 0;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        cursor:pointer;
+        transition: 0.3s;
+        
+        
+    }
+    
+    div#secundario button:hover{
+        background-color: var(--bg-blue-royal-light); 
+    }  
+}
+
+
